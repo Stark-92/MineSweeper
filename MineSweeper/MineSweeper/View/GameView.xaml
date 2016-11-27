@@ -6,10 +6,15 @@
 
   <StackLayout  Padding="30">
   
-  <Label x:Name="MinesNumber" Text="4 Mines Left" VerticalOptions="Center" HorizontalOptions="Center" />
+   <Label x:Name="Discription"  VerticalOptions="Center" HorizontalOptions="Center"  HorizontalTextAlignment="Center" FontAttributes="Bold"/>
     
-    <Label x:Name="Discription" Text="4 Mines Left" VerticalOptions="Center" HorizontalOptions="Center" />
+   <Label x:Name="MinesNumberLabel" Text="{Binding MinesNumber}" VerticalOptions="Center" HorizontalOptions="Center" FontSize="20" Margin="0,80,0,0" />
 
+    <Label x:Name="GameStatusLabel" Text="{Binding GameStatus}" VerticalOptions="End" HorizontalOptions="Center" FontSize="40" TextColor="Red" />
+
+  
+    <!-- Grid dimantions is 7*5 -->
+    
     <Grid x:Name="GameGrid"  HorizontalOptions="Center" VerticalOptions="CenterAndExpand">
 
       <Grid.RowDefinitions >
@@ -18,6 +23,8 @@
         <RowDefinition Height="*"/>
         <RowDefinition Height="*"/>
         <RowDefinition Height="*"/>
+        <RowDefinition Height="*"/>
+        <RowDefinition Height="*"/> 
         <RowDefinition Height="*"/> 
         
       </Grid.RowDefinitions>
@@ -34,188 +41,262 @@
 
       <!--First row-->
       
-    <Label BackgroundColor="Gray"   Grid.Row="0" Grid.Column="0">
-      <Label.GestureRecognizers>        
-        <TapGestureRecognizer Tapped="SingleTap" NumberOfTapsRequired="1"></TapGestureRecognizer>
-        <TapGestureRecognizer Tapped="DoubleTap" NumberOfTapsRequired="2"></TapGestureRecognizer>       
-      </Label.GestureRecognizers>
-    </Label>
-
-      <Label BackgroundColor="Gray"  Grid.Row="0" Grid.Column="1">
+      <Label BackgroundColor="Gray"   Grid.Row="0" Grid.Column="0" HorizontalTextAlignment="Center">
         <Label.GestureRecognizers>
-          <TapGestureRecognizer Tapped="SingleTap" NumberOfTapsRequired="1"></TapGestureRecognizer>
-          <TapGestureRecognizer Tapped="DoubleTap" NumberOfTapsRequired="2"></TapGestureRecognizer>
+          <TapGestureRecognizer Tapped="SingleTapView" NumberOfTapsRequired="1"></TapGestureRecognizer>
+          <TapGestureRecognizer Tapped="DoubleTapView" NumberOfTapsRequired="2"></TapGestureRecognizer>
         </Label.GestureRecognizers>
       </Label>
 
-      <Label BackgroundColor="Gray"  Grid.Row="0" Grid.Column="2">
+      <Label BackgroundColor="Gray"  Grid.Row="0" Grid.Column="1" HorizontalTextAlignment="Center">
         <Label.GestureRecognizers>
-          <TapGestureRecognizer Tapped="SingleTap" NumberOfTapsRequired="1"></TapGestureRecognizer>
-          <TapGestureRecognizer Tapped="DoubleTap" NumberOfTapsRequired="2"></TapGestureRecognizer>
+          <TapGestureRecognizer Tapped="SingleTapView" NumberOfTapsRequired="1"></TapGestureRecognizer>
+          <TapGestureRecognizer Tapped="DoubleTapView" NumberOfTapsRequired="2"></TapGestureRecognizer>
         </Label.GestureRecognizers>
       </Label>
 
-      <Label BackgroundColor="Gray"  Grid.Row="0" Grid.Column="3">
+      <Label BackgroundColor="Gray"  Grid.Row="0" Grid.Column="2" HorizontalTextAlignment="Center">
         <Label.GestureRecognizers>
-          <TapGestureRecognizer Tapped="SingleTap" NumberOfTapsRequired="1"></TapGestureRecognizer>
-          <TapGestureRecognizer Tapped="DoubleTap" NumberOfTapsRequired="2"></TapGestureRecognizer>
+          <TapGestureRecognizer Tapped="SingleTapView" NumberOfTapsRequired="1"></TapGestureRecognizer>
+          <TapGestureRecognizer Tapped="DoubleTapView" NumberOfTapsRequired="2"></TapGestureRecognizer>
         </Label.GestureRecognizers>
       </Label>
 
-      <Label BackgroundColor="Gray"  Grid.Row="0" Grid.Column="4">
+      <Label BackgroundColor="Gray"  Grid.Row="0" Grid.Column="3" HorizontalTextAlignment="Center">
         <Label.GestureRecognizers>
-          <TapGestureRecognizer Tapped="SingleTap" NumberOfTapsRequired="1"></TapGestureRecognizer>
-          <TapGestureRecognizer Tapped="DoubleTap" NumberOfTapsRequired="2"></TapGestureRecognizer>
+          <TapGestureRecognizer Tapped="SingleTapView" NumberOfTapsRequired="1"></TapGestureRecognizer>
+          <TapGestureRecognizer Tapped="DoubleTapView" NumberOfTapsRequired="2"></TapGestureRecognizer>
+        </Label.GestureRecognizers>
+      </Label>
+
+      <Label BackgroundColor="Gray"  Grid.Row="0" Grid.Column="4" HorizontalTextAlignment="Center">
+        <Label.GestureRecognizers>
+          <TapGestureRecognizer Tapped="SingleTapView" NumberOfTapsRequired="1"></TapGestureRecognizer>
+          <TapGestureRecognizer Tapped="DoubleTapView" NumberOfTapsRequired="2"></TapGestureRecognizer>
         </Label.GestureRecognizers>
       </Label>
 
       <!--Seconde row-->
       
-      <Label BackgroundColor="Gray"  Grid.Row="1" Grid.Column="0">
+      <Label BackgroundColor="Gray"  Grid.Row="1" Grid.Column="0" HorizontalTextAlignment="Center">
         <Label.GestureRecognizers>
-          <TapGestureRecognizer Tapped="SingleTap" NumberOfTapsRequired="1"></TapGestureRecognizer>
-          <TapGestureRecognizer Tapped="DoubleTap" NumberOfTapsRequired="2"></TapGestureRecognizer>
+          <TapGestureRecognizer Tapped="SingleTapView" NumberOfTapsRequired="1"></TapGestureRecognizer>
+          <TapGestureRecognizer Tapped="DoubleTapView" NumberOfTapsRequired="2"></TapGestureRecognizer>
         </Label.GestureRecognizers>
       </Label>
 
-      <Label BackgroundColor="Gray"  Grid.Row="1" Grid.Column="1">
+      <Label BackgroundColor="Gray"  Grid.Row="1" Grid.Column="1" HorizontalTextAlignment="Center">
         <Label.GestureRecognizers>
-          <TapGestureRecognizer Tapped="SingleTap" NumberOfTapsRequired="1"></TapGestureRecognizer>
-          <TapGestureRecognizer Tapped="DoubleTap" NumberOfTapsRequired="2"></TapGestureRecognizer>
+          <TapGestureRecognizer Tapped="SingleTapView" NumberOfTapsRequired="1"></TapGestureRecognizer>
+          <TapGestureRecognizer Tapped="DoubleTapView" NumberOfTapsRequired="2"></TapGestureRecognizer>
         </Label.GestureRecognizers>
       </Label>
 
-      <Label BackgroundColor="Gray"  Grid.Row="1" Grid.Column="2">
+      <Label BackgroundColor="Gray"  Grid.Row="1" Grid.Column="2" HorizontalTextAlignment="Center">
         <Label.GestureRecognizers>
-          <TapGestureRecognizer Tapped="SingleTap" NumberOfTapsRequired="1"></TapGestureRecognizer>
-          <TapGestureRecognizer Tapped="DoubleTap" NumberOfTapsRequired="2"></TapGestureRecognizer>
+          <TapGestureRecognizer Tapped="SingleTapView" NumberOfTapsRequired="1"></TapGestureRecognizer>
+          <TapGestureRecognizer Tapped="DoubleTapView" NumberOfTapsRequired="2"></TapGestureRecognizer>
         </Label.GestureRecognizers>
       </Label>
 
-      <Label BackgroundColor="Gray"  Grid.Row="1" Grid.Column="3">
+      <Label BackgroundColor="Gray"  Grid.Row="1" Grid.Column="3" HorizontalTextAlignment="Center">
         <Label.GestureRecognizers>
-          <TapGestureRecognizer Tapped="SingleTap" NumberOfTapsRequired="1"></TapGestureRecognizer>
-          <TapGestureRecognizer Tapped="DoubleTap" NumberOfTapsRequired="2"></TapGestureRecognizer>
+          <TapGestureRecognizer Tapped="SingleTapView" NumberOfTapsRequired="1"></TapGestureRecognizer>
+          <TapGestureRecognizer Tapped="DoubleTapView" NumberOfTapsRequired="2"></TapGestureRecognizer>
         </Label.GestureRecognizers>
       </Label>
 
-      <Label BackgroundColor="Gray"  Grid.Row="1" Grid.Column="4">
+      <Label BackgroundColor="Gray"  Grid.Row="1" Grid.Column="4" HorizontalTextAlignment="Center">
         <Label.GestureRecognizers>
-          <TapGestureRecognizer Tapped="SingleTap" NumberOfTapsRequired="1"></TapGestureRecognizer>
-          <TapGestureRecognizer Tapped="DoubleTap" NumberOfTapsRequired="2"></TapGestureRecognizer>
+          <TapGestureRecognizer Tapped="SingleTapView" NumberOfTapsRequired="1"></TapGestureRecognizer>
+          <TapGestureRecognizer Tapped="DoubleTapView" NumberOfTapsRequired="2"></TapGestureRecognizer>
         </Label.GestureRecognizers>
       </Label>
 
       <!--Third row-->
 
-      <Label BackgroundColor="Gray"  Grid.Row="2" Grid.Column="0">
+      <Label BackgroundColor="Gray"  Grid.Row="2" Grid.Column="0" HorizontalTextAlignment="Center">
         <Label.GestureRecognizers>
-          <TapGestureRecognizer Tapped="SingleTap" NumberOfTapsRequired="1"></TapGestureRecognizer>
-          <TapGestureRecognizer Tapped="DoubleTap" NumberOfTapsRequired="2"></TapGestureRecognizer>
+          <TapGestureRecognizer Tapped="SingleTapView" NumberOfTapsRequired="1"></TapGestureRecognizer>
+          <TapGestureRecognizer Tapped="DoubleTapView" NumberOfTapsRequired="2"></TapGestureRecognizer>
         </Label.GestureRecognizers>
       </Label>
 
-      <Label BackgroundColor="Gray"  Grid.Row="2" Grid.Column="1">
+      <Label BackgroundColor="Gray"  Grid.Row="2" Grid.Column="1" HorizontalTextAlignment="Center">
         <Label.GestureRecognizers>
-          <TapGestureRecognizer Tapped="SingleTap" NumberOfTapsRequired="1"></TapGestureRecognizer>
-          <TapGestureRecognizer Tapped="DoubleTap" NumberOfTapsRequired="2"></TapGestureRecognizer>
+          <TapGestureRecognizer Tapped="SingleTapView" NumberOfTapsRequired="1"></TapGestureRecognizer>
+          <TapGestureRecognizer Tapped="DoubleTapView" NumberOfTapsRequired="2"></TapGestureRecognizer>
         </Label.GestureRecognizers>
       </Label>
 
-      <Label BackgroundColor="Gray"  Grid.Row="2" Grid.Column="2">
+      <Label BackgroundColor="Gray"  Grid.Row="2" Grid.Column="2" HorizontalTextAlignment="Center">
         <Label.GestureRecognizers>
-          <TapGestureRecognizer Tapped="SingleTap" NumberOfTapsRequired="1"></TapGestureRecognizer>
-          <TapGestureRecognizer Tapped="DoubleTap" NumberOfTapsRequired="2"></TapGestureRecognizer>
+          <TapGestureRecognizer Tapped="SingleTapView" NumberOfTapsRequired="1"></TapGestureRecognizer>
+          <TapGestureRecognizer Tapped="DoubleTapView" NumberOfTapsRequired="2"></TapGestureRecognizer>
         </Label.GestureRecognizers>
       </Label>
 
-      <Label BackgroundColor="Gray"  Grid.Row="2" Grid.Column="3">
+      <Label BackgroundColor="Gray"  Grid.Row="2" Grid.Column="3" HorizontalTextAlignment="Center">
         <Label.GestureRecognizers>
-          <TapGestureRecognizer Tapped="SingleTap" NumberOfTapsRequired="1"></TapGestureRecognizer>
-          <TapGestureRecognizer Tapped="DoubleTap" NumberOfTapsRequired="2"></TapGestureRecognizer>
+          <TapGestureRecognizer Tapped="SingleTapView" NumberOfTapsRequired="1"></TapGestureRecognizer>
+          <TapGestureRecognizer Tapped="DoubleTapView" NumberOfTapsRequired="2"></TapGestureRecognizer>
         </Label.GestureRecognizers>
       </Label>
 
-      <Label BackgroundColor="Gray"  Grid.Row="2" Grid.Column="4">
+      <Label BackgroundColor="Gray"  Grid.Row="2" Grid.Column="4" HorizontalTextAlignment="Center">
         <Label.GestureRecognizers>
-          <TapGestureRecognizer Tapped="SingleTap" NumberOfTapsRequired="1"></TapGestureRecognizer>
-          <TapGestureRecognizer Tapped="DoubleTap" NumberOfTapsRequired="2"></TapGestureRecognizer>
+          <TapGestureRecognizer Tapped="SingleTapView" NumberOfTapsRequired="1"></TapGestureRecognizer>
+          <TapGestureRecognizer Tapped="DoubleTapView" NumberOfTapsRequired="2"></TapGestureRecognizer>
         </Label.GestureRecognizers>
       </Label>
 
 
       <!--Fourth row-->
 
-      <Label BackgroundColor="Gray"  Grid.Row="3" Grid.Column="0">
+      <Label BackgroundColor="Gray"  Grid.Row="3" Grid.Column="0" HorizontalTextAlignment="Center">
         <Label.GestureRecognizers>
-          <TapGestureRecognizer Tapped="SingleTap" NumberOfTapsRequired="1"></TapGestureRecognizer>
-          <TapGestureRecognizer Tapped="DoubleTap" NumberOfTapsRequired="2"></TapGestureRecognizer>
+          <TapGestureRecognizer Tapped="SingleTapView" NumberOfTapsRequired="1"></TapGestureRecognizer>
+          <TapGestureRecognizer Tapped="DoubleTapView" NumberOfTapsRequired="2"></TapGestureRecognizer>
         </Label.GestureRecognizers>
       </Label>
 
-      <Label BackgroundColor="Gray"  Grid.Row="3" Grid.Column="1">
+      <Label BackgroundColor="Gray"  Grid.Row="3" Grid.Column="1" HorizontalTextAlignment="Center">
         <Label.GestureRecognizers>
-          <TapGestureRecognizer Tapped="SingleTap" NumberOfTapsRequired="1"></TapGestureRecognizer>
-          <TapGestureRecognizer Tapped="DoubleTap" NumberOfTapsRequired="2"></TapGestureRecognizer>
+          <TapGestureRecognizer Tapped="SingleTapView" NumberOfTapsRequired="1"></TapGestureRecognizer>
+          <TapGestureRecognizer Tapped="DoubleTapView" NumberOfTapsRequired="2"></TapGestureRecognizer>
         </Label.GestureRecognizers>
       </Label>
 
-      <Label BackgroundColor="Gray"  Grid.Row="3" Grid.Column="2">
+      <Label BackgroundColor="Gray"  Grid.Row="3" Grid.Column="2" HorizontalTextAlignment="Center">
         <Label.GestureRecognizers>
-          <TapGestureRecognizer Tapped="SingleTap" NumberOfTapsRequired="1"></TapGestureRecognizer>
-          <TapGestureRecognizer Tapped="DoubleTap" NumberOfTapsRequired="2"></TapGestureRecognizer>
+          <TapGestureRecognizer Tapped="SingleTapView" NumberOfTapsRequired="1"></TapGestureRecognizer>
+          <TapGestureRecognizer Tapped="DoubleTapView" NumberOfTapsRequired="2"></TapGestureRecognizer>
         </Label.GestureRecognizers>
       </Label>
 
-      <Label BackgroundColor="Gray"  Grid.Row="3" Grid.Column="3">
+      <Label BackgroundColor="Gray"  Grid.Row="3" Grid.Column="3" HorizontalTextAlignment="Center">
         <Label.GestureRecognizers>
-          <TapGestureRecognizer Tapped="SingleTap" NumberOfTapsRequired="1"></TapGestureRecognizer>
-          <TapGestureRecognizer Tapped="DoubleTap" NumberOfTapsRequired="2"></TapGestureRecognizer>
+          <TapGestureRecognizer Tapped="SingleTapView" NumberOfTapsRequired="1"></TapGestureRecognizer>
+          <TapGestureRecognizer Tapped="DoubleTapView" NumberOfTapsRequired="2"></TapGestureRecognizer>
         </Label.GestureRecognizers>
       </Label>
 
-      <Label BackgroundColor="Gray"  Grid.Row="3" Grid.Column="4">
+      <Label BackgroundColor="Gray"  Grid.Row="3" Grid.Column="4" HorizontalTextAlignment="Center">
         <Label.GestureRecognizers>
-          <TapGestureRecognizer Tapped="SingleTap" NumberOfTapsRequired="1"></TapGestureRecognizer>
-          <TapGestureRecognizer Tapped="DoubleTap" NumberOfTapsRequired="2"></TapGestureRecognizer>
+          <TapGestureRecognizer Tapped="SingleTapView" NumberOfTapsRequired="1"></TapGestureRecognizer>
+          <TapGestureRecognizer Tapped="DoubleTapView" NumberOfTapsRequired="2"></TapGestureRecognizer>
         </Label.GestureRecognizers>
       </Label>
 
 
       <!--Fifth row-->
 
-      <Label BackgroundColor="Gray"  Grid.Row="4" Grid.Column="0">
+      <Label BackgroundColor="Gray"  Grid.Row="4" Grid.Column="0" HorizontalTextAlignment="Center">
         <Label.GestureRecognizers>
-          <TapGestureRecognizer Tapped="SingleTap" NumberOfTapsRequired="1"></TapGestureRecognizer>
-          <TapGestureRecognizer Tapped="DoubleTap" NumberOfTapsRequired="2"></TapGestureRecognizer>
+          <TapGestureRecognizer Tapped="SingleTapView" NumberOfTapsRequired="1"></TapGestureRecognizer>
+          <TapGestureRecognizer Tapped="DoubleTapView" NumberOfTapsRequired="2"></TapGestureRecognizer>
         </Label.GestureRecognizers>
       </Label>
 
-      <Label BackgroundColor="Gray"  Grid.Row="4" Grid.Column="1">
+      <Label BackgroundColor="Gray"  Grid.Row="4" Grid.Column="1" HorizontalTextAlignment="Center">
         <Label.GestureRecognizers>
-          <TapGestureRecognizer Tapped="SingleTap" NumberOfTapsRequired="1"></TapGestureRecognizer>
-          <TapGestureRecognizer Tapped="DoubleTap" NumberOfTapsRequired="2"></TapGestureRecognizer>
+          <TapGestureRecognizer Tapped="SingleTapView" NumberOfTapsRequired="1"></TapGestureRecognizer>
+          <TapGestureRecognizer Tapped="DoubleTapView" NumberOfTapsRequired="2"></TapGestureRecognizer>
         </Label.GestureRecognizers>
       </Label>
 
-      <Label BackgroundColor="Gray"  Grid.Row="4" Grid.Column="2">
+      <Label BackgroundColor="Gray"  Grid.Row="4" Grid.Column="2" HorizontalTextAlignment="Center">
         <Label.GestureRecognizers>
-          <TapGestureRecognizer Tapped="SingleTap" NumberOfTapsRequired="1"></TapGestureRecognizer>
-          <TapGestureRecognizer Tapped="DoubleTap" NumberOfTapsRequired="2"></TapGestureRecognizer>
+          <TapGestureRecognizer Tapped="SingleTapView" NumberOfTapsRequired="1"></TapGestureRecognizer>
+          <TapGestureRecognizer Tapped="DoubleTapView" NumberOfTapsRequired="2"></TapGestureRecognizer>
         </Label.GestureRecognizers>
       </Label>
 
-      <Label BackgroundColor="Gray"  Grid.Row="4" Grid.Column="3">
+      <Label BackgroundColor="Gray"  Grid.Row="4" Grid.Column="3" HorizontalTextAlignment="Center">
         <Label.GestureRecognizers>
-          <TapGestureRecognizer Tapped="SingleTap" NumberOfTapsRequired="1"></TapGestureRecognizer>
-          <TapGestureRecognizer Tapped="DoubleTap" NumberOfTapsRequired="2"></TapGestureRecognizer>
+          <TapGestureRecognizer Tapped="SingleTapView" NumberOfTapsRequired="1"></TapGestureRecognizer>
+          <TapGestureRecognizer Tapped="DoubleTapView" NumberOfTapsRequired="2"></TapGestureRecognizer>
         </Label.GestureRecognizers>
       </Label>
 
-      <Label BackgroundColor="Gray"  Grid.Row="4" Grid.Column="4">
+      <Label BackgroundColor="Gray"  Grid.Row="4" Grid.Column="4" HorizontalTextAlignment="Center">
         <Label.GestureRecognizers>
-          <TapGestureRecognizer Tapped="SingleTap" NumberOfTapsRequired="1"></TapGestureRecognizer>
-          <TapGestureRecognizer Tapped="DoubleTap" NumberOfTapsRequired="2"></TapGestureRecognizer>
+          <TapGestureRecognizer Tapped="SingleTapView" NumberOfTapsRequired="1"></TapGestureRecognizer>
+          <TapGestureRecognizer Tapped="DoubleTapView" NumberOfTapsRequired="2"></TapGestureRecognizer>
+        </Label.GestureRecognizers>
+      </Label>
+      
+      <!--Sexth row-->
+
+      <Label BackgroundColor="Gray"  Grid.Row="5" Grid.Column="0" HorizontalTextAlignment="Center">
+        <Label.GestureRecognizers>
+          <TapGestureRecognizer Tapped="SingleTapView" NumberOfTapsRequired="1"></TapGestureRecognizer>
+          <TapGestureRecognizer Tapped="DoubleTapView" NumberOfTapsRequired="2"></TapGestureRecognizer>
+        </Label.GestureRecognizers>
+      </Label>
+
+      <Label BackgroundColor="Gray"  Grid.Row="5" Grid.Column="1" HorizontalTextAlignment="Center">
+        <Label.GestureRecognizers>
+          <TapGestureRecognizer Tapped="SingleTapView" NumberOfTapsRequired="1"></TapGestureRecognizer>
+          <TapGestureRecognizer Tapped="DoubleTapView" NumberOfTapsRequired="2"></TapGestureRecognizer>
+        </Label.GestureRecognizers>
+      </Label>
+
+      <Label BackgroundColor="Gray"  Grid.Row="5" Grid.Column="2" HorizontalTextAlignment="Center">
+        <Label.GestureRecognizers>
+          <TapGestureRecognizer Tapped="SingleTapView" NumberOfTapsRequired="1"></TapGestureRecognizer>
+          <TapGestureRecognizer Tapped="DoubleTapView" NumberOfTapsRequired="2"></TapGestureRecognizer>
+        </Label.GestureRecognizers>
+      </Label>
+
+      <Label BackgroundColor="Gray"  Grid.Row="5" Grid.Column="3" HorizontalTextAlignment="Center">
+        <Label.GestureRecognizers>
+          <TapGestureRecognizer Tapped="SingleTapView" NumberOfTapsRequired="1"></TapGestureRecognizer>
+          <TapGestureRecognizer Tapped="DoubleTapView" NumberOfTapsRequired="2"></TapGestureRecognizer>
+        </Label.GestureRecognizers>
+      </Label>
+
+      <Label BackgroundColor="Gray"  Grid.Row="5" Grid.Column="4" HorizontalTextAlignment="Center">
+        <Label.GestureRecognizers>
+          <TapGestureRecognizer Tapped="SingleTapView" NumberOfTapsRequired="1"></TapGestureRecognizer>
+          <TapGestureRecognizer Tapped="DoubleTapView" NumberOfTapsRequired="2"></TapGestureRecognizer>
+        </Label.GestureRecognizers>
+      </Label>
+      
+      <!--Seventh row-->
+
+      <Label BackgroundColor="Gray"  Grid.Row="6" Grid.Column="0" HorizontalTextAlignment="Center">
+        <Label.GestureRecognizers>
+          <TapGestureRecognizer Tapped="SingleTapView" NumberOfTapsRequired="1"></TapGestureRecognizer>
+          <TapGestureRecognizer Tapped="DoubleTapView" NumberOfTapsRequired="2"></TapGestureRecognizer>
+        </Label.GestureRecognizers>
+      </Label>
+
+      <Label BackgroundColor="Gray"  Grid.Row="6" Grid.Column="1" HorizontalTextAlignment="Center">
+        <Label.GestureRecognizers>
+          <TapGestureRecognizer Tapped="SingleTapView" NumberOfTapsRequired="1"></TapGestureRecognizer>
+          <TapGestureRecognizer Tapped="DoubleTapView" NumberOfTapsRequired="2"></TapGestureRecognizer>
+        </Label.GestureRecognizers>
+      </Label>
+
+      <Label BackgroundColor="Gray"  Grid.Row="6" Grid.Column="2" HorizontalTextAlignment="Center">
+        <Label.GestureRecognizers>
+          <TapGestureRecognizer Tapped="SingleTapView" NumberOfTapsRequired="1"></TapGestureRecognizer>
+          <TapGestureRecognizer Tapped="DoubleTapView" NumberOfTapsRequired="2"></TapGestureRecognizer>
+        </Label.GestureRecognizers>
+      </Label>
+
+      <Label BackgroundColor="Gray"  Grid.Row="6" Grid.Column="3" HorizontalTextAlignment="Center">
+        <Label.GestureRecognizers>
+          <TapGestureRecognizer Tapped="SingleTapView" NumberOfTapsRequired="1"></TapGestureRecognizer>
+          <TapGestureRecognizer Tapped="DoubleTapView" NumberOfTapsRequired="2"></TapGestureRecognizer>
+        </Label.GestureRecognizers>
+      </Label>
+
+      <Label BackgroundColor="Gray"  Grid.Row="6" Grid.Column="4" HorizontalTextAlignment="Center">
+        <Label.GestureRecognizers>
+          <TapGestureRecognizer Tapped="SingleTapView" NumberOfTapsRequired="1"></TapGestureRecognizer>
+          <TapGestureRecognizer Tapped="DoubleTapView" NumberOfTapsRequired="2"></TapGestureRecognizer>
         </Label.GestureRecognizers>
       </Label>
 
