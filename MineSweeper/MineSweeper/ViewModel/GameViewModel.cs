@@ -1,6 +1,5 @@
 ﻿using System.ComponentModel;
 using System.Runtime.CompilerServices;
-using System.Windows.Input;
 using MineSweeper.Model;
 using Xamarin.Forms;
 
@@ -23,6 +22,8 @@ namespace MineSweeper.ViewModel
         //String variable used to inform the user if he won or lost
         private string _gameStatus;
 
+        public GameViewModel() {}
+
         public GameViewModel(Grid gameGrid)
         {
             _gameGrid = gameGrid;
@@ -31,13 +32,12 @@ namespace MineSweeper.ViewModel
             GameStatus = "";
 
         }
-
+  
         //Method returns GameModel object //This method is used for testing
         public GameModel GetGameModel()
         {
             return _gameModel;
         }
-
 
         //Method used to retuen 2D array of game grid
         public int[][] GetGameGridViewModel()

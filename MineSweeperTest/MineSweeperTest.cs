@@ -1,8 +1,5 @@
-﻿using System;
-using System.Diagnostics;
-using Microsoft.VisualStudio.TestTools.UnitTesting;
+﻿using Microsoft.VisualStudio.TestTools.UnitTesting;
 using MineSweeper.Model;
-using MineSweeper.View;
 using MineSweeper.ViewModel;
 using Xamarin.Forms;
 
@@ -131,7 +128,6 @@ namespace MineSweeperTest
         //This method is for copying a grid to another to testing GameViewModel and GameModel classes
         private void CopyGrid(Grid oldGrid, Grid newGrid)
         {
-            var grid = new Grid();
             for (var i = 0; i < oldGrid.Children.Count; i++)
             {
                 newGrid.Children[i].BackgroundColor = oldGrid.Children[i].BackgroundColor;

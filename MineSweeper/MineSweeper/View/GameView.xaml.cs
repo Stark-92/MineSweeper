@@ -20,12 +20,6 @@ namespace MineSweeper.View
                 "Tap once to reveal a cell and twice on a cell to plant or remove a flag marking suspicious mine.";
         }
 
-        //Method returns GameViewModel object //This method is used for testing
-        public GameViewModel GetGameViewModel()
-        {
-            return _gameViewModel;
-        }
-
         //Method called when the user taps once on any label
         private void SingleTapView(object sender, EventArgs e)
         {
@@ -41,7 +35,7 @@ namespace MineSweeper.View
         {
 
             //This code shows the game grid with mines positions inside Debug window.
-          /*  int[][] mygrid = _gameViewModel.GetGameGridViewModel();
+           /* int[][] mygrid = _gameViewModel.GetGameGridViewModel();
             string line = "";
 
             for (int i = 0; i < 7; i++)
