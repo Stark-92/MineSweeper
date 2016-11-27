@@ -1,11 +1,12 @@
 ﻿using System.ComponentModel;
 using System.Runtime.CompilerServices;
+using System.Windows.Input;
 using MineSweeper.Model;
 using Xamarin.Forms;
 
 namespace MineSweeper.ViewModel
 {
-    internal class GameViewModel : INotifyPropertyChanged
+    public class GameViewModel : INotifyPropertyChanged
     {
         //Object from GameModel class
         private readonly GameModel _gameModel;
@@ -22,7 +23,6 @@ namespace MineSweeper.ViewModel
         //String variable used to inform the user if he won or lost
         private string _gameStatus;
 
-
         public GameViewModel(Grid gameGrid)
         {
             _gameGrid = gameGrid;
@@ -32,8 +32,14 @@ namespace MineSweeper.ViewModel
 
         }
 
-       
-        //TODO delete it after finish because it is useless
+        //Method returns GameModel object //This method is used for testing
+        public GameModel GetGameModel()
+        {
+            return _gameModel;
+        }
+
+
+        //Method used to retuen 2D array of game grid
         public int[][] GetGameGridViewModel()
         {
             return _gameModel.GetGameGridModel();
@@ -45,13 +51,14 @@ namespace MineSweeper.ViewModel
             //status may has 3 values {-1,0,1} which mean {lose,continue playing, won}
             var status =_gameModel.SingleTapModel(sender);
             UpdateGameGrid();
-            if (status == -1)
+            switch (status)
             {
-                GameStatus = "YOU LOST!";
-            }
-            else if (status == 1)
-            {
-                GameStatus = "YOU WON!";
+                case -1:
+                    GameStatus = "YOU LOST!";
+                    break;
+                case 1:
+                    GameStatus = "YOU WON!";
+                    break;
             }
         }
 
@@ -59,17 +66,16 @@ namespace MineSweeper.ViewModel
         private void UpdateGameGrid()
         {
             _gUiGameGrid = _gameModel.GetGuiGameGrid();
-            for (var i = 0; i < _gameModel.GetRowsCount(); i++)
+            for (var i = 0; i < GameModel.GetRowsCount(); i++)
             {
-                for (var j = 0; j < _gameModel.GetColumnsCount(); j++)
+                for (var j = 0; j < GameModel.GetColumnsCount(); j++)
                 {
-                    _gameGrid.Children[i* _gameModel.GetColumnsCount() + j].BackgroundColor = _gUiGameGrid[i][j].BackgroundColor;
-                    _gameGrid.Children[i * _gameModel.GetColumnsCount() + j].IsEnabled = _gUiGameGrid[i][j].IsEnabled;
+                    _gameGrid.Children[i* GameModel.GetColumnsCount() + j].BackgroundColor = _gUiGameGrid[i][j].BackgroundColor;
+                    _gameGrid.Children[i * GameModel.GetColumnsCount() + j].IsEnabled = _gUiGameGrid[i][j].IsEnabled;
                 }
 
             }
         }
-
 
         //Method called by DoubleTapView in GameView class
         //Change the label color if it is possible and update mines number
@@ -103,7 +109,6 @@ namespace MineSweeper.ViewModel
                 OnPropertyChanged();
             }
         }
-
 
         public event PropertyChangedEventHandler PropertyChanged;
 

@@ -3,14 +3,13 @@ using Xamarin.Forms;
 
 namespace MineSweeper.Model
 {
-    internal class GameModel
+    public class GameModel
     {
         //Variable used to calculate mines left
         private int _minesNumber;
 
         //Variable used to count taped cells
         private int _tapedCells;
-
 
         //2D array used to represent the game grid with mines
         private int [][] _gameGrid;
@@ -50,13 +49,13 @@ namespace MineSweeper.Model
         }
 
         //Method used to return rows number
-        public  int GetRowsCount()
+        public static int GetRowsCount()
         {
             return RowsCount;
         }
 
         //Method used to return columns number
-        public int GetColumnsCount()
+        public static int GetColumnsCount()
         {
             return ColumnsCount;
         }
