@@ -1,5 +1,7 @@
 ﻿using System.ComponentModel;
+using System.Diagnostics;
 using System.Runtime.CompilerServices;
+using System.Windows.Input;
 using MineSweeper.Model;
 using Xamarin.Forms;
 
@@ -22,6 +24,12 @@ namespace MineSweeper.ViewModel
         //String variable used to inform the user if he won or lost
         private string _gameStatus;
 
+        //Command used to call SingleTapCommand
+        private readonly ICommand _singleTapCommand;
+
+        //Command used to call DoubleTapCommand
+        private readonly ICommand _doubleTapCommand;
+
         public GameViewModel() {}
 
         public GameViewModel(Grid gameGrid)
@@ -30,9 +38,23 @@ namespace MineSweeper.ViewModel
             _gameModel= new GameModel(gameGrid);
             MinesNumber = _gameModel.GetMinesNumberModel();
             GameStatus = "";
+            _singleTapCommand= new Command(SingleTapViewModel);
+            _doubleTapCommand = new Command(DoubleTapViewModel);
 
         }
-  
+
+        //Binding the command
+        public ICommand SingleTapCommand
+        {
+            get { return _singleTapCommand; }
+        }
+
+        //Binding the command
+        public ICommand DoubleTapCommand
+        {
+            get { return _doubleTapCommand; }
+        }
+
         //Method returns GameModel object //This method is used for testing
         public GameModel GetGameModel()
         {
@@ -48,17 +70,23 @@ namespace MineSweeper.ViewModel
         //Method called by SingleTapView in GameView class
         public void SingleTapViewModel(object sender)
         {
-            //status may has 3 values {-1,0,1} which mean {lose,continue playing, won}
-            var status =_gameModel.SingleTapModel(sender);
-            UpdateGameGrid();
-            switch (status)
-            {
-                case -1:
-                    GameStatus = "YOU LOST!";
-                    break;
-                case 1:
-                    GameStatus = "YOU WON!";
-                    break;
+            if (GameStatus == "") //I wrote this line to stop user's taps after win or lose.
+            {                     // The reason for it because Label.IsEnabled=false
+                                  // is not working due a bug in Xamarin as I read at Xamarin blog
+                                  // Or maybe because of my machine :\
+
+                //status may has 3 values {-1,0,1} which mean {lose,continue playing, won}
+                var status = _gameModel.SingleTapModel(sender);
+                UpdateGameGrid();
+                switch (status)
+                {
+                    case -1:
+                        GameStatus = "YOU LOST!";
+                        break;
+                    case 1:
+                        GameStatus = "YOU WON!";
+                        break;
+                }
             }
         }
 
@@ -81,9 +109,27 @@ namespace MineSweeper.ViewModel
         //Change the label color if it is possible and update mines number
         public void DoubleTapViewModel(object sender)
         {
-            var label = (Label)sender;
-            label.BackgroundColor = _gameModel.DoubleTapModel(label.BackgroundColor);                      
-            MinesNumber = _gameModel.GetMinesNumberModel();            
+
+            if (GameStatus == "")
+            {
+                //This code shows the game grid with mines positions inside Debug window.
+                int[][] mygrid = GetGameGridViewModel();
+                string line = "";
+
+                for (int i = 0; i < 7; i++)
+                {
+                    for (int j = 0; j < 5; j++)
+                    {
+                        line += mygrid[i][j] + " ";
+                    }
+                    Debug.WriteLine(line);
+                    line = "";
+                }
+
+                var label = (Label) sender;
+                label.BackgroundColor = _gameModel.DoubleTapModel(label.BackgroundColor);
+                MinesNumber = _gameModel.GetMinesNumberModel();
+            }
         }
 
         //Binded variable 

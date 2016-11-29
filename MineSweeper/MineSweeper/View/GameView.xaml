@@ -30,7 +30,7 @@
         <RowDefinition Height="*"/>
         <RowDefinition Height="*"/>
         <RowDefinition Height="*"/> 
-        <RowDefinition Height="*"/> 
+        <RowDefinition Height="*"/>
         
       </Grid.RowDefinitions>
 
@@ -46,264 +46,266 @@
 
       <!--First row-->
       
-      <Label BackgroundColor="Gray"   Grid.Row="0" Grid.Column="0" HorizontalTextAlignment="Center">
+      <Label x:Name="Cell00" BackgroundColor="Gray"   Grid.Row="0" Grid.Column="0" HorizontalTextAlignment="Center">
         <Label.GestureRecognizers>
-          <TapGestureRecognizer Tapped="SingleTapView" NumberOfTapsRequired="1"></TapGestureRecognizer>
-          <TapGestureRecognizer Tapped="DoubleTapView" NumberOfTapsRequired="2"></TapGestureRecognizer>
+          <TapGestureRecognizer Command="{Binding SingleTapCommand}" CommandParameter="{x:Reference Cell00}"  NumberOfTapsRequired="1"></TapGestureRecognizer>
+          <TapGestureRecognizer Command="{Binding DoubleTapCommand}" CommandParameter="{x:Reference Cell00}" NumberOfTapsRequired="2"></TapGestureRecognizer>
         </Label.GestureRecognizers>
       </Label>
 
-      <Label BackgroundColor="Gray"  Grid.Row="0" Grid.Column="1" HorizontalTextAlignment="Center">
+      <Label x:Name="Cell01" BackgroundColor="Gray"   Grid.Row="0" Grid.Column="1" HorizontalTextAlignment="Center">
         <Label.GestureRecognizers>
-          <TapGestureRecognizer Tapped="SingleTapView" NumberOfTapsRequired="1"></TapGestureRecognizer>
-          <TapGestureRecognizer Tapped="DoubleTapView" NumberOfTapsRequired="2"></TapGestureRecognizer>
+          <TapGestureRecognizer Command="{Binding SingleTapCommand}" CommandParameter="{x:Reference Cell01}"  NumberOfTapsRequired="1"></TapGestureRecognizer>
+          <TapGestureRecognizer Command="{Binding DoubleTapCommand}" CommandParameter="{x:Reference Cell01}" NumberOfTapsRequired="2"></TapGestureRecognizer>
         </Label.GestureRecognizers>
       </Label>
 
-      <Label BackgroundColor="Gray"  Grid.Row="0" Grid.Column="2" HorizontalTextAlignment="Center">
+      <Label x:Name="Cell02" BackgroundColor="Gray"   Grid.Row="0" Grid.Column="2" HorizontalTextAlignment="Center">
         <Label.GestureRecognizers>
-          <TapGestureRecognizer Tapped="SingleTapView" NumberOfTapsRequired="1"></TapGestureRecognizer>
-          <TapGestureRecognizer Tapped="DoubleTapView" NumberOfTapsRequired="2"></TapGestureRecognizer>
+          <TapGestureRecognizer Command="{Binding SingleTapCommand}" CommandParameter="{x:Reference Cell02}"  NumberOfTapsRequired="1"></TapGestureRecognizer>
+          <TapGestureRecognizer Command="{Binding DoubleTapCommand}" CommandParameter="{x:Reference Cell02}" NumberOfTapsRequired="2"></TapGestureRecognizer>
         </Label.GestureRecognizers>
       </Label>
 
-      <Label BackgroundColor="Gray"  Grid.Row="0" Grid.Column="3" HorizontalTextAlignment="Center">
+      <Label x:Name="Cell03" BackgroundColor="Gray"   Grid.Row="0" Grid.Column="3" HorizontalTextAlignment="Center">
         <Label.GestureRecognizers>
-          <TapGestureRecognizer Tapped="SingleTapView" NumberOfTapsRequired="1"></TapGestureRecognizer>
-          <TapGestureRecognizer Tapped="DoubleTapView" NumberOfTapsRequired="2"></TapGestureRecognizer>
+          <TapGestureRecognizer Command="{Binding SingleTapCommand}" CommandParameter="{x:Reference Cell03}"  NumberOfTapsRequired="1"></TapGestureRecognizer>
+          <TapGestureRecognizer Command="{Binding DoubleTapCommand}" CommandParameter="{x:Reference Cell03}" NumberOfTapsRequired="2"></TapGestureRecognizer>
         </Label.GestureRecognizers>
       </Label>
 
-      <Label BackgroundColor="Gray"  Grid.Row="0" Grid.Column="4" HorizontalTextAlignment="Center">
+      <Label x:Name="Cell04" BackgroundColor="Gray"   Grid.Row="0" Grid.Column="4" HorizontalTextAlignment="Center">
         <Label.GestureRecognizers>
-          <TapGestureRecognizer Tapped="SingleTapView" NumberOfTapsRequired="1"></TapGestureRecognizer>
-          <TapGestureRecognizer Tapped="DoubleTapView" NumberOfTapsRequired="2"></TapGestureRecognizer>
+          <TapGestureRecognizer Command="{Binding SingleTapCommand}" CommandParameter="{x:Reference Cell04}"  NumberOfTapsRequired="1"></TapGestureRecognizer>
+          <TapGestureRecognizer Command="{Binding DoubleTapCommand}" CommandParameter="{x:Reference Cell04}" NumberOfTapsRequired="2"></TapGestureRecognizer>
         </Label.GestureRecognizers>
       </Label>
-
+      
       <!--Seconde row-->
       
-      <Label BackgroundColor="Gray"  Grid.Row="1" Grid.Column="0" HorizontalTextAlignment="Center">
+      <Label x:Name="Cell10" BackgroundColor="Gray"   Grid.Row="1" Grid.Column="0" HorizontalTextAlignment="Center">
         <Label.GestureRecognizers>
-          <TapGestureRecognizer Tapped="SingleTapView" NumberOfTapsRequired="1"></TapGestureRecognizer>
-          <TapGestureRecognizer Tapped="DoubleTapView" NumberOfTapsRequired="2"></TapGestureRecognizer>
+          <TapGestureRecognizer Command="{Binding SingleTapCommand}" CommandParameter="{x:Reference Cell10}"  NumberOfTapsRequired="1"></TapGestureRecognizer>
+          <TapGestureRecognizer Command="{Binding DoubleTapCommand}" CommandParameter="{x:Reference Cell10}" NumberOfTapsRequired="2"></TapGestureRecognizer>
         </Label.GestureRecognizers>
       </Label>
 
-      <Label BackgroundColor="Gray"  Grid.Row="1" Grid.Column="1" HorizontalTextAlignment="Center">
+      <Label x:Name="Cell11" BackgroundColor="Gray"   Grid.Row="1" Grid.Column="1" HorizontalTextAlignment="Center">
         <Label.GestureRecognizers>
-          <TapGestureRecognizer Tapped="SingleTapView" NumberOfTapsRequired="1"></TapGestureRecognizer>
-          <TapGestureRecognizer Tapped="DoubleTapView" NumberOfTapsRequired="2"></TapGestureRecognizer>
+          <TapGestureRecognizer Command="{Binding SingleTapCommand}" CommandParameter="{x:Reference Cell11}"  NumberOfTapsRequired="1"></TapGestureRecognizer>
+          <TapGestureRecognizer Command="{Binding DoubleTapCommand}" CommandParameter="{x:Reference Cell11}" NumberOfTapsRequired="2"></TapGestureRecognizer>
         </Label.GestureRecognizers>
       </Label>
 
-      <Label BackgroundColor="Gray"  Grid.Row="1" Grid.Column="2" HorizontalTextAlignment="Center">
+      <Label x:Name="Cell12" BackgroundColor="Gray"   Grid.Row="1" Grid.Column="2" HorizontalTextAlignment="Center">
         <Label.GestureRecognizers>
-          <TapGestureRecognizer Tapped="SingleTapView" NumberOfTapsRequired="1"></TapGestureRecognizer>
-          <TapGestureRecognizer Tapped="DoubleTapView" NumberOfTapsRequired="2"></TapGestureRecognizer>
+          <TapGestureRecognizer Command="{Binding SingleTapCommand}" CommandParameter="{x:Reference Cell12}"  NumberOfTapsRequired="1"></TapGestureRecognizer>
+          <TapGestureRecognizer Command="{Binding DoubleTapCommand}" CommandParameter="{x:Reference Cell12}" NumberOfTapsRequired="2"></TapGestureRecognizer>
         </Label.GestureRecognizers>
       </Label>
 
-      <Label BackgroundColor="Gray"  Grid.Row="1" Grid.Column="3" HorizontalTextAlignment="Center">
+      <Label x:Name="Cell13" BackgroundColor="Gray"   Grid.Row="1" Grid.Column="3" HorizontalTextAlignment="Center">
         <Label.GestureRecognizers>
-          <TapGestureRecognizer Tapped="SingleTapView" NumberOfTapsRequired="1"></TapGestureRecognizer>
-          <TapGestureRecognizer Tapped="DoubleTapView" NumberOfTapsRequired="2"></TapGestureRecognizer>
+          <TapGestureRecognizer Command="{Binding SingleTapCommand}" CommandParameter="{x:Reference Cell13}"  NumberOfTapsRequired="1"></TapGestureRecognizer>
+          <TapGestureRecognizer Command="{Binding DoubleTapCommand}" CommandParameter="{x:Reference Cell13}" NumberOfTapsRequired="2"></TapGestureRecognizer>
         </Label.GestureRecognizers>
       </Label>
 
-      <Label BackgroundColor="Gray"  Grid.Row="1" Grid.Column="4" HorizontalTextAlignment="Center">
+      <Label x:Name="Cell14" BackgroundColor="Gray"   Grid.Row="1" Grid.Column="4" HorizontalTextAlignment="Center">
         <Label.GestureRecognizers>
-          <TapGestureRecognizer Tapped="SingleTapView" NumberOfTapsRequired="1"></TapGestureRecognizer>
-          <TapGestureRecognizer Tapped="DoubleTapView" NumberOfTapsRequired="2"></TapGestureRecognizer>
+          <TapGestureRecognizer Command="{Binding SingleTapCommand}" CommandParameter="{x:Reference Cell14}"  NumberOfTapsRequired="1"></TapGestureRecognizer>
+          <TapGestureRecognizer Command="{Binding DoubleTapCommand}" CommandParameter="{x:Reference Cell14}" NumberOfTapsRequired="2"></TapGestureRecognizer>
         </Label.GestureRecognizers>
       </Label>
 
       <!--Third row-->
 
-      <Label BackgroundColor="Gray"  Grid.Row="2" Grid.Column="0" HorizontalTextAlignment="Center">
+      <Label x:Name="Cell20" BackgroundColor="Gray"   Grid.Row="2" Grid.Column="0" HorizontalTextAlignment="Center">
         <Label.GestureRecognizers>
-          <TapGestureRecognizer Tapped="SingleTapView" NumberOfTapsRequired="1"></TapGestureRecognizer>
-          <TapGestureRecognizer Tapped="DoubleTapView" NumberOfTapsRequired="2"></TapGestureRecognizer>
+          <TapGestureRecognizer Command="{Binding SingleTapCommand}" CommandParameter="{x:Reference Cell20}"  NumberOfTapsRequired="1"></TapGestureRecognizer>
+          <TapGestureRecognizer Command="{Binding DoubleTapCommand}" CommandParameter="{x:Reference Cell20}" NumberOfTapsRequired="2"></TapGestureRecognizer>
         </Label.GestureRecognizers>
       </Label>
 
-      <Label BackgroundColor="Gray"  Grid.Row="2" Grid.Column="1" HorizontalTextAlignment="Center">
+      <Label x:Name="Cell21" BackgroundColor="Gray"   Grid.Row="2" Grid.Column="1" HorizontalTextAlignment="Center">
         <Label.GestureRecognizers>
-          <TapGestureRecognizer Tapped="SingleTapView" NumberOfTapsRequired="1"></TapGestureRecognizer>
-          <TapGestureRecognizer Tapped="DoubleTapView" NumberOfTapsRequired="2"></TapGestureRecognizer>
+          <TapGestureRecognizer Command="{Binding SingleTapCommand}" CommandParameter="{x:Reference Cell21}"  NumberOfTapsRequired="1"></TapGestureRecognizer>
+          <TapGestureRecognizer Command="{Binding DoubleTapCommand}" CommandParameter="{x:Reference Cell21}" NumberOfTapsRequired="2"></TapGestureRecognizer>
         </Label.GestureRecognizers>
       </Label>
 
-      <Label BackgroundColor="Gray"  Grid.Row="2" Grid.Column="2" HorizontalTextAlignment="Center">
+      <Label x:Name="Cell22" BackgroundColor="Gray"   Grid.Row="2" Grid.Column="2" HorizontalTextAlignment="Center">
         <Label.GestureRecognizers>
-          <TapGestureRecognizer Tapped="SingleTapView" NumberOfTapsRequired="1"></TapGestureRecognizer>
-          <TapGestureRecognizer Tapped="DoubleTapView" NumberOfTapsRequired="2"></TapGestureRecognizer>
+          <TapGestureRecognizer Command="{Binding SingleTapCommand}" CommandParameter="{x:Reference Cell22}"  NumberOfTapsRequired="1"></TapGestureRecognizer>
+          <TapGestureRecognizer Command="{Binding DoubleTapCommand}" CommandParameter="{x:Reference Cell22}" NumberOfTapsRequired="2"></TapGestureRecognizer>
         </Label.GestureRecognizers>
       </Label>
 
-      <Label BackgroundColor="Gray"  Grid.Row="2" Grid.Column="3" HorizontalTextAlignment="Center">
+      <Label x:Name="Cell23" BackgroundColor="Gray"   Grid.Row="2" Grid.Column="3" HorizontalTextAlignment="Center">
         <Label.GestureRecognizers>
-          <TapGestureRecognizer Tapped="SingleTapView" NumberOfTapsRequired="1"></TapGestureRecognizer>
-          <TapGestureRecognizer Tapped="DoubleTapView" NumberOfTapsRequired="2"></TapGestureRecognizer>
+          <TapGestureRecognizer Command="{Binding SingleTapCommand}" CommandParameter="{x:Reference Cell23}"  NumberOfTapsRequired="1"></TapGestureRecognizer>
+          <TapGestureRecognizer Command="{Binding DoubleTapCommand}" CommandParameter="{x:Reference Cell23}" NumberOfTapsRequired="2"></TapGestureRecognizer>
         </Label.GestureRecognizers>
       </Label>
 
-      <Label BackgroundColor="Gray"  Grid.Row="2" Grid.Column="4" HorizontalTextAlignment="Center">
+      <Label x:Name="Cell24" BackgroundColor="Gray"   Grid.Row="2" Grid.Column="4" HorizontalTextAlignment="Center">
         <Label.GestureRecognizers>
-          <TapGestureRecognizer Tapped="SingleTapView" NumberOfTapsRequired="1"></TapGestureRecognizer>
-          <TapGestureRecognizer Tapped="DoubleTapView" NumberOfTapsRequired="2"></TapGestureRecognizer>
+          <TapGestureRecognizer Command="{Binding SingleTapCommand}" CommandParameter="{x:Reference Cell24}"  NumberOfTapsRequired="1"></TapGestureRecognizer>
+          <TapGestureRecognizer Command="{Binding DoubleTapCommand}" CommandParameter="{x:Reference Cell24}" NumberOfTapsRequired="2"></TapGestureRecognizer>
         </Label.GestureRecognizers>
       </Label>
 
 
       <!--Fourth row-->
 
-      <Label BackgroundColor="Gray"  Grid.Row="3" Grid.Column="0" HorizontalTextAlignment="Center">
+      <Label x:Name="Cell30" BackgroundColor="Gray"   Grid.Row="3" Grid.Column="0" HorizontalTextAlignment="Center">
         <Label.GestureRecognizers>
-          <TapGestureRecognizer Tapped="SingleTapView" NumberOfTapsRequired="1"></TapGestureRecognizer>
-          <TapGestureRecognizer Tapped="DoubleTapView" NumberOfTapsRequired="2"></TapGestureRecognizer>
+          <TapGestureRecognizer Command="{Binding SingleTapCommand}" CommandParameter="{x:Reference Cell30}"  NumberOfTapsRequired="1"></TapGestureRecognizer>
+          <TapGestureRecognizer Command="{Binding DoubleTapCommand}" CommandParameter="{x:Reference Cell30}" NumberOfTapsRequired="2"></TapGestureRecognizer>
         </Label.GestureRecognizers>
       </Label>
 
-      <Label BackgroundColor="Gray"  Grid.Row="3" Grid.Column="1" HorizontalTextAlignment="Center">
+      <Label x:Name="Cell31" BackgroundColor="Gray"   Grid.Row="3" Grid.Column="1" HorizontalTextAlignment="Center">
         <Label.GestureRecognizers>
-          <TapGestureRecognizer Tapped="SingleTapView" NumberOfTapsRequired="1"></TapGestureRecognizer>
-          <TapGestureRecognizer Tapped="DoubleTapView" NumberOfTapsRequired="2"></TapGestureRecognizer>
+          <TapGestureRecognizer Command="{Binding SingleTapCommand}" CommandParameter="{x:Reference Cell31}"  NumberOfTapsRequired="1"></TapGestureRecognizer>
+          <TapGestureRecognizer Command="{Binding DoubleTapCommand}" CommandParameter="{x:Reference Cell31}" NumberOfTapsRequired="2"></TapGestureRecognizer>
         </Label.GestureRecognizers>
       </Label>
 
-      <Label BackgroundColor="Gray"  Grid.Row="3" Grid.Column="2" HorizontalTextAlignment="Center">
+      <Label x:Name="Cell32" BackgroundColor="Gray"   Grid.Row="3" Grid.Column="2" HorizontalTextAlignment="Center">
         <Label.GestureRecognizers>
-          <TapGestureRecognizer Tapped="SingleTapView" NumberOfTapsRequired="1"></TapGestureRecognizer>
-          <TapGestureRecognizer Tapped="DoubleTapView" NumberOfTapsRequired="2"></TapGestureRecognizer>
+          <TapGestureRecognizer Command="{Binding SingleTapCommand}" CommandParameter="{x:Reference Cell32}"  NumberOfTapsRequired="1"></TapGestureRecognizer>
+          <TapGestureRecognizer Command="{Binding DoubleTapCommand}" CommandParameter="{x:Reference Cell32}" NumberOfTapsRequired="2"></TapGestureRecognizer>
         </Label.GestureRecognizers>
       </Label>
 
-      <Label BackgroundColor="Gray"  Grid.Row="3" Grid.Column="3" HorizontalTextAlignment="Center">
+      <Label x:Name="Cell33" BackgroundColor="Gray"   Grid.Row="3" Grid.Column="3" HorizontalTextAlignment="Center">
         <Label.GestureRecognizers>
-          <TapGestureRecognizer Tapped="SingleTapView" NumberOfTapsRequired="1"></TapGestureRecognizer>
-          <TapGestureRecognizer Tapped="DoubleTapView" NumberOfTapsRequired="2"></TapGestureRecognizer>
+          <TapGestureRecognizer Command="{Binding SingleTapCommand}" CommandParameter="{x:Reference Cell33}"  NumberOfTapsRequired="1"></TapGestureRecognizer>
+          <TapGestureRecognizer Command="{Binding DoubleTapCommand}" CommandParameter="{x:Reference Cell33}" NumberOfTapsRequired="2"></TapGestureRecognizer>
         </Label.GestureRecognizers>
       </Label>
 
-      <Label BackgroundColor="Gray"  Grid.Row="3" Grid.Column="4" HorizontalTextAlignment="Center">
+      <Label x:Name="Cell34" BackgroundColor="Gray"   Grid.Row="3" Grid.Column="4" HorizontalTextAlignment="Center">
         <Label.GestureRecognizers>
-          <TapGestureRecognizer Tapped="SingleTapView" NumberOfTapsRequired="1"></TapGestureRecognizer>
-          <TapGestureRecognizer Tapped="DoubleTapView" NumberOfTapsRequired="2"></TapGestureRecognizer>
+          <TapGestureRecognizer Command="{Binding SingleTapCommand}" CommandParameter="{x:Reference Cell34}"  NumberOfTapsRequired="1"></TapGestureRecognizer>
+          <TapGestureRecognizer Command="{Binding DoubleTapCommand}" CommandParameter="{x:Reference Cell34}" NumberOfTapsRequired="2"></TapGestureRecognizer>
         </Label.GestureRecognizers>
       </Label>
 
 
       <!--Fifth row-->
 
-      <Label BackgroundColor="Gray"  Grid.Row="4" Grid.Column="0" HorizontalTextAlignment="Center">
+      <Label x:Name="Cell40" BackgroundColor="Gray"   Grid.Row="4" Grid.Column="0" HorizontalTextAlignment="Center">
         <Label.GestureRecognizers>
-          <TapGestureRecognizer Tapped="SingleTapView" NumberOfTapsRequired="1"></TapGestureRecognizer>
-          <TapGestureRecognizer Tapped="DoubleTapView" NumberOfTapsRequired="2"></TapGestureRecognizer>
+          <TapGestureRecognizer Command="{Binding SingleTapCommand}" CommandParameter="{x:Reference Cell40}"  NumberOfTapsRequired="1"></TapGestureRecognizer>
+          <TapGestureRecognizer Command="{Binding DoubleTapCommand}" CommandParameter="{x:Reference Cell40}" NumberOfTapsRequired="2"></TapGestureRecognizer>
         </Label.GestureRecognizers>
       </Label>
 
-      <Label BackgroundColor="Gray"  Grid.Row="4" Grid.Column="1" HorizontalTextAlignment="Center">
+      <Label x:Name="Cell41" BackgroundColor="Gray"   Grid.Row="4" Grid.Column="1" HorizontalTextAlignment="Center">
         <Label.GestureRecognizers>
-          <TapGestureRecognizer Tapped="SingleTapView" NumberOfTapsRequired="1"></TapGestureRecognizer>
-          <TapGestureRecognizer Tapped="DoubleTapView" NumberOfTapsRequired="2"></TapGestureRecognizer>
+          <TapGestureRecognizer Command="{Binding SingleTapCommand}" CommandParameter="{x:Reference Cell41}"  NumberOfTapsRequired="1"></TapGestureRecognizer>
+          <TapGestureRecognizer Command="{Binding DoubleTapCommand}" CommandParameter="{x:Reference Cell41}" NumberOfTapsRequired="2"></TapGestureRecognizer>
         </Label.GestureRecognizers>
       </Label>
 
-      <Label BackgroundColor="Gray"  Grid.Row="4" Grid.Column="2" HorizontalTextAlignment="Center">
+      <Label x:Name="Cell42" BackgroundColor="Gray"   Grid.Row="4" Grid.Column="2" HorizontalTextAlignment="Center">
         <Label.GestureRecognizers>
-          <TapGestureRecognizer Tapped="SingleTapView" NumberOfTapsRequired="1"></TapGestureRecognizer>
-          <TapGestureRecognizer Tapped="DoubleTapView" NumberOfTapsRequired="2"></TapGestureRecognizer>
+          <TapGestureRecognizer Command="{Binding SingleTapCommand}" CommandParameter="{x:Reference Cell42}"  NumberOfTapsRequired="1"></TapGestureRecognizer>
+          <TapGestureRecognizer Command="{Binding DoubleTapCommand}" CommandParameter="{x:Reference Cell42}" NumberOfTapsRequired="2"></TapGestureRecognizer>
         </Label.GestureRecognizers>
       </Label>
 
-      <Label BackgroundColor="Gray"  Grid.Row="4" Grid.Column="3" HorizontalTextAlignment="Center">
+      <Label x:Name="Cell43" BackgroundColor="Gray"   Grid.Row="4" Grid.Column="3" HorizontalTextAlignment="Center">
         <Label.GestureRecognizers>
-          <TapGestureRecognizer Tapped="SingleTapView" NumberOfTapsRequired="1"></TapGestureRecognizer>
-          <TapGestureRecognizer Tapped="DoubleTapView" NumberOfTapsRequired="2"></TapGestureRecognizer>
+          <TapGestureRecognizer Command="{Binding SingleTapCommand}" CommandParameter="{x:Reference Cell43}"  NumberOfTapsRequired="1"></TapGestureRecognizer>
+          <TapGestureRecognizer Command="{Binding DoubleTapCommand}" CommandParameter="{x:Reference Cell43}" NumberOfTapsRequired="2"></TapGestureRecognizer>
         </Label.GestureRecognizers>
       </Label>
 
-      <Label BackgroundColor="Gray"  Grid.Row="4" Grid.Column="4" HorizontalTextAlignment="Center">
+      <Label x:Name="Cell44" BackgroundColor="Gray"   Grid.Row="4" Grid.Column="4" HorizontalTextAlignment="Center">
         <Label.GestureRecognizers>
-          <TapGestureRecognizer Tapped="SingleTapView" NumberOfTapsRequired="1"></TapGestureRecognizer>
-          <TapGestureRecognizer Tapped="DoubleTapView" NumberOfTapsRequired="2"></TapGestureRecognizer>
+          <TapGestureRecognizer Command="{Binding SingleTapCommand}" CommandParameter="{x:Reference Cell44}"  NumberOfTapsRequired="1"></TapGestureRecognizer>
+          <TapGestureRecognizer Command="{Binding DoubleTapCommand}" CommandParameter="{x:Reference Cell44}" NumberOfTapsRequired="2"></TapGestureRecognizer>
         </Label.GestureRecognizers>
       </Label>
       
       <!--Sexth row-->
 
-      <Label BackgroundColor="Gray"  Grid.Row="5" Grid.Column="0" HorizontalTextAlignment="Center">
+      <Label x:Name="Cell50" BackgroundColor="Gray"   Grid.Row="5" Grid.Column="0" HorizontalTextAlignment="Center">
         <Label.GestureRecognizers>
-          <TapGestureRecognizer Tapped="SingleTapView" NumberOfTapsRequired="1"></TapGestureRecognizer>
-          <TapGestureRecognizer Tapped="DoubleTapView" NumberOfTapsRequired="2"></TapGestureRecognizer>
+          <TapGestureRecognizer Command="{Binding SingleTapCommand}" CommandParameter="{x:Reference Cell50}"  NumberOfTapsRequired="1"></TapGestureRecognizer>
+          <TapGestureRecognizer Command="{Binding DoubleTapCommand}" CommandParameter="{x:Reference Cell50}" NumberOfTapsRequired="2"></TapGestureRecognizer>
         </Label.GestureRecognizers>
       </Label>
 
-      <Label BackgroundColor="Gray"  Grid.Row="5" Grid.Column="1" HorizontalTextAlignment="Center">
+      <Label x:Name="Cell51" BackgroundColor="Gray"   Grid.Row="5" Grid.Column="1" HorizontalTextAlignment="Center">
         <Label.GestureRecognizers>
-          <TapGestureRecognizer Tapped="SingleTapView" NumberOfTapsRequired="1"></TapGestureRecognizer>
-          <TapGestureRecognizer Tapped="DoubleTapView" NumberOfTapsRequired="2"></TapGestureRecognizer>
+          <TapGestureRecognizer Command="{Binding SingleTapCommand}" CommandParameter="{x:Reference Cell51}"  NumberOfTapsRequired="1"></TapGestureRecognizer>
+          <TapGestureRecognizer Command="{Binding DoubleTapCommand}" CommandParameter="{x:Reference Cell51}" NumberOfTapsRequired="2"></TapGestureRecognizer>
         </Label.GestureRecognizers>
       </Label>
 
-      <Label BackgroundColor="Gray"  Grid.Row="5" Grid.Column="2" HorizontalTextAlignment="Center">
+      <Label x:Name="Cell52" BackgroundColor="Gray"   Grid.Row="5" Grid.Column="2" HorizontalTextAlignment="Center">
         <Label.GestureRecognizers>
-          <TapGestureRecognizer Tapped="SingleTapView" NumberOfTapsRequired="1"></TapGestureRecognizer>
-          <TapGestureRecognizer Tapped="DoubleTapView" NumberOfTapsRequired="2"></TapGestureRecognizer>
+          <TapGestureRecognizer Command="{Binding SingleTapCommand}" CommandParameter="{x:Reference Cell52}"  NumberOfTapsRequired="1"></TapGestureRecognizer>
+          <TapGestureRecognizer Command="{Binding DoubleTapCommand}" CommandParameter="{x:Reference Cell52}" NumberOfTapsRequired="2"></TapGestureRecognizer>
         </Label.GestureRecognizers>
       </Label>
 
-      <Label BackgroundColor="Gray"  Grid.Row="5" Grid.Column="3" HorizontalTextAlignment="Center">
+      <Label x:Name="Cell53" BackgroundColor="Gray"   Grid.Row="5" Grid.Column="3" HorizontalTextAlignment="Center">
         <Label.GestureRecognizers>
-          <TapGestureRecognizer Tapped="SingleTapView" NumberOfTapsRequired="1"></TapGestureRecognizer>
-          <TapGestureRecognizer Tapped="DoubleTapView" NumberOfTapsRequired="2"></TapGestureRecognizer>
+          <TapGestureRecognizer Command="{Binding SingleTapCommand}" CommandParameter="{x:Reference Cell53}"  NumberOfTapsRequired="1"></TapGestureRecognizer>
+          <TapGestureRecognizer Command="{Binding DoubleTapCommand}" CommandParameter="{x:Reference Cell53}" NumberOfTapsRequired="2"></TapGestureRecognizer>
         </Label.GestureRecognizers>
       </Label>
 
-      <Label BackgroundColor="Gray"  Grid.Row="5" Grid.Column="4" HorizontalTextAlignment="Center">
+      <Label x:Name="Cell54" BackgroundColor="Gray"   Grid.Row="5" Grid.Column="4" HorizontalTextAlignment="Center">
         <Label.GestureRecognizers>
-          <TapGestureRecognizer Tapped="SingleTapView" NumberOfTapsRequired="1"></TapGestureRecognizer>
-          <TapGestureRecognizer Tapped="DoubleTapView" NumberOfTapsRequired="2"></TapGestureRecognizer>
+          <TapGestureRecognizer Command="{Binding SingleTapCommand}" CommandParameter="{x:Reference Cell54}"  NumberOfTapsRequired="1"></TapGestureRecognizer>
+          <TapGestureRecognizer Command="{Binding DoubleTapCommand}" CommandParameter="{x:Reference Cell54}" NumberOfTapsRequired="2"></TapGestureRecognizer>
         </Label.GestureRecognizers>
       </Label>
       
       <!--Seventh row-->
 
-      <Label BackgroundColor="Gray"  Grid.Row="6" Grid.Column="0" HorizontalTextAlignment="Center">
+      <Label x:Name="Cell60" BackgroundColor="Gray"   Grid.Row="6" Grid.Column="0" HorizontalTextAlignment="Center">
         <Label.GestureRecognizers>
-          <TapGestureRecognizer Tapped="SingleTapView" NumberOfTapsRequired="1"></TapGestureRecognizer>
-          <TapGestureRecognizer Tapped="DoubleTapView" NumberOfTapsRequired="2"></TapGestureRecognizer>
+          <TapGestureRecognizer Command="{Binding SingleTapCommand}" CommandParameter="{x:Reference Cell60}"  NumberOfTapsRequired="1"></TapGestureRecognizer>
+          <TapGestureRecognizer Command="{Binding DoubleTapCommand}" CommandParameter="{x:Reference Cell60}" NumberOfTapsRequired="2"></TapGestureRecognizer>
         </Label.GestureRecognizers>
       </Label>
 
-      <Label BackgroundColor="Gray"  Grid.Row="6" Grid.Column="1" HorizontalTextAlignment="Center">
+      <Label x:Name="Cell61" BackgroundColor="Gray"   Grid.Row="6" Grid.Column="1" HorizontalTextAlignment="Center">
         <Label.GestureRecognizers>
-          <TapGestureRecognizer Tapped="SingleTapView" NumberOfTapsRequired="1"></TapGestureRecognizer>
-          <TapGestureRecognizer Tapped="DoubleTapView" NumberOfTapsRequired="2"></TapGestureRecognizer>
+          <TapGestureRecognizer Command="{Binding SingleTapCommand}" CommandParameter="{x:Reference Cell61}"  NumberOfTapsRequired="1"></TapGestureRecognizer>
+          <TapGestureRecognizer Command="{Binding DoubleTapCommand}" CommandParameter="{x:Reference Cell61}" NumberOfTapsRequired="2"></TapGestureRecognizer>
         </Label.GestureRecognizers>
       </Label>
 
-      <Label BackgroundColor="Gray"  Grid.Row="6" Grid.Column="2" HorizontalTextAlignment="Center">
+      <Label x:Name="Cell62" BackgroundColor="Gray"   Grid.Row="6" Grid.Column="2" HorizontalTextAlignment="Center">
         <Label.GestureRecognizers>
-          <TapGestureRecognizer Tapped="SingleTapView" NumberOfTapsRequired="1"></TapGestureRecognizer>
-          <TapGestureRecognizer Tapped="DoubleTapView" NumberOfTapsRequired="2"></TapGestureRecognizer>
+          <TapGestureRecognizer Command="{Binding SingleTapCommand}" CommandParameter="{x:Reference Cell62}"  NumberOfTapsRequired="1"></TapGestureRecognizer>
+          <TapGestureRecognizer Command="{Binding DoubleTapCommand}" CommandParameter="{x:Reference Cell62}" NumberOfTapsRequired="2"></TapGestureRecognizer>
         </Label.GestureRecognizers>
       </Label>
 
-      <Label BackgroundColor="Gray"  Grid.Row="6" Grid.Column="3" HorizontalTextAlignment="Center">
+      <Label x:Name="Cell63" BackgroundColor="Gray"   Grid.Row="6" Grid.Column="3" HorizontalTextAlignment="Center">
         <Label.GestureRecognizers>
-          <TapGestureRecognizer Tapped="SingleTapView" NumberOfTapsRequired="1"></TapGestureRecognizer>
-          <TapGestureRecognizer Tapped="DoubleTapView" NumberOfTapsRequired="2"></TapGestureRecognizer>
+          <TapGestureRecognizer Command="{Binding SingleTapCommand}" CommandParameter="{x:Reference Cell63}"  NumberOfTapsRequired="1"></TapGestureRecognizer>
+          <TapGestureRecognizer Command="{Binding DoubleTapCommand}" CommandParameter="{x:Reference Cell63}" NumberOfTapsRequired="2"></TapGestureRecognizer>
         </Label.GestureRecognizers>
       </Label>
 
-      <Label BackgroundColor="Gray"  Grid.Row="6" Grid.Column="4" HorizontalTextAlignment="Center">
+      <Label x:Name="Cell64" BackgroundColor="Gray"   Grid.Row="6" Grid.Column="4" HorizontalTextAlignment="Center">
         <Label.GestureRecognizers>
-          <TapGestureRecognizer Tapped="SingleTapView" NumberOfTapsRequired="1"></TapGestureRecognizer>
-          <TapGestureRecognizer Tapped="DoubleTapView" NumberOfTapsRequired="2"></TapGestureRecognizer>
+          <TapGestureRecognizer Command="{Binding SingleTapCommand}" CommandParameter="{x:Reference Cell64}"  NumberOfTapsRequired="1"></TapGestureRecognizer>
+          <TapGestureRecognizer Command="{Binding DoubleTapCommand}" CommandParameter="{x:Reference Cell64}" NumberOfTapsRequired="2"></TapGestureRecognizer>
         </Label.GestureRecognizers>
       </Label>
+
+      
 
 
     </Grid>

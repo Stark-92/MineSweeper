@@ -102,8 +102,8 @@ namespace MineSweeper.Model
             do
             {
                 Random random = new Random();
-                mineX = random.Next(0, 7);
-                mineY = random.Next(0, 5);
+                mineX = random.Next(0, GetRowsCount());
+                mineY = random.Next(0, GetColumnsCount());
             } while (_gameGrid[mineX][ mineY] < 0);
         }
 

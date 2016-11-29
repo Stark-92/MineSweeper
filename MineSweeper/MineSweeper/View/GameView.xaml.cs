@@ -34,19 +34,7 @@ namespace MineSweeper.View
         private void DoubleTapView(object sender, EventArgs e)
         {
 
-            //This code shows the game grid with mines positions inside Debug window.
-           /* int[][] mygrid = _gameViewModel.GetGameGridViewModel();
-            string line = "";
-
-            for (int i = 0; i < 7; i++)
-            {
-                for (int j = 0; j < 5; j++)
-                {
-                    line += mygrid[i][j] + " ";
-                }
-                Debug.WriteLine(line);
-                line = "";
-            }*/
+            
             
             if (GameStatusLabel.Text == "")
                 _gameViewModel.DoubleTapViewModel(sender);
