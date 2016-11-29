@@ -113,7 +113,7 @@ namespace MineSweeper.ViewModel
             if (GameStatus == "")
             {
                 //This code shows the game grid with mines positions inside Debug window.
-                int[][] mygrid = GetGameGridViewModel();
+              /*  int[][] mygrid = GetGameGridViewModel();
                 string line = "";
 
                 for (int i = 0; i < 7; i++)
@@ -124,7 +124,7 @@ namespace MineSweeper.ViewModel
                     }
                     Debug.WriteLine(line);
                     line = "";
-                }
+                }*/
 
                 var label = (Label) sender;
                 label.BackgroundColor = _gameModel.DoubleTapModel(label.BackgroundColor);
